@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.text h4 {
+    float: left;
+    margin: auto;
+}
+
+.menu .text h4 {
+    width: 16%;
+}
+
+img {
+    width: 100%;
+}
+
+.wrap {
+    max-width: 1000px;
+    margin: auto;
+}

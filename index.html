@@ -1,73 +1,131 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>Đơn xin việc</title>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
     <style>
-        #mobai{
-            text-align: center;
-            font-size: 24px;
-            color: red;
+        * {
+            margin: 0;
+            padding: 0;
         }
-        #mobai1{
-            text-align: center;
-            color:deeppink;
+        
+        form {
+            padding: 4px;
         }
-        .gioithieu{   
-            font-style:italic;
-            
-            color: goldenrod;
-            }        
-        .gioithieu, .thanbai, #ketbai{
-            font-size: 20px;
+        
+        table {
+            padding: 0px;
         }
-        .thanbai{
-            text-align:justify;
-            font-style: italic;
-            color: blue;
+        
+        .main {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%)translateY(-50%);
         }
-        #ketbai{
+        
+        input.textview {
+            width: 414px;
+            height: 60px;
+            font-size: 30px;
             text-align: right;
-            color: coral;
         }
-        #gioithieu1{
-            text-decoration: underline;
+        
+        .button {
+            width: 100px;
+            height: 50px;
+            font-size: 25px;
+            margin: 2px;
         }
-
-
+        
+        input.button {
+            background: linear-gradient(to bottom, black, #7eff00);
+            color: white;
+        }
+        
+        .bg {
+            background: linear-gradient(to right, #ff000080, #0000ffc4);
+            height: -webkit-fill-available;
+        }
     </style>
 </head>
 
 <body>
-<p id="mobai">
-    Cộng Hoà Xã Hội Chủ Nghĩa Việt Nam<br/>
-    Độc lập - Tự do - Hạnh phúc
-</p>
+    <div class="bg"></div>
+    <div class="main">
+        <form name="form">
+            <input class="textview" name="textview">
+        </form>
+        <table>
+            <tr>
+                <td><input class="button" type="button" value="AC" onclick="ac()"></td>
+                <td><input class="button" type="button" value="&larr;" onclick="back()"></td>
+                <td><input class="button" type="button" value="√" onclick="can()"></td>
+                <td><input class="button" type="button" value="x&sup2;" onclick="binh()"></td>
 
-<p id="mobai">.....o0o.....</p>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="7" onclick="insert(7)"></td>
+                <td><input class="button" type="button" value="8" onclick="insert(8)"></td>
+                <td><input class="button" type="button" value="9" onclick="insert(9)"></td>
+                <td><input class="button" type="button" value="/" onclick="insert('/')"></td>
 
-<h1 id="mobai1">ĐƠN ỨNG TUYỂN</h1>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="4" onclick="insert(4)"></td>
+                <td><input class="button" type="button" value="5" onclick="insert(5)"></td>
+                <td><input class="button" type="button" value="6" onclick="insert(6)"></td>
+                <td><input class="button" type="button" value="*" onclick="insert('*')"></td>
 
-<p class="gioithieu"><span id="gioithieu1">Kính gửi</span>:............................................</p>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="1" onclick="insert(1)"></td>
+                <td><input class="button" type="button" value="2" onclick="insert(2)"></td>
+                <td><input class="button" type="button" value="3" onclick="insert(3)"></td>
+                <td><input class="button" type="button" value="-" onclick="insert('-')"></td>
 
-<p class="gioithieu"><span id="gioithieu1">Tên tôi là</span>: ............................................</p>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="0" onclick="insert(0)"></td>
+                <td><input class="button" type="button" value="." onclick="insert('.')"></td>
+                <td><input class="button" type="button" value="=" onclick="euqal()"></td>
+                <td><input class="button" type="button" value="+" onclick="insert('+')"></td>
 
-<p class="gioithieu"><span id="gioithieu1">Sinh năm</span>: ............................................</p>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function insert(num) {
+            document.form.textview.value += num
+        }
 
-<p class="gioithieu"><span id="gioithieu1">Địa chỉ</span>: ............................................</p>
+        function euqal() {
+            let exp = document.form.textview.value
+            if (exp) {
+                document.form.textview.value = eval(exp)
+            }
+        }
 
-<p class="thanbai" style="text-indent: 30px">Qua thông tin đăng trên techmaster.vn tôi được biết hiện nay Quý công ty đang có nhu cầu tuyển dụng Lập trình viên web Frontend. Với kiến thức và kinh nghiệm tích lũy được tôi nghĩ rằng tôi ứng tuyển vị trí này rất thích hợp.</p>
+        function ac() {
+            document.form.textview.value = "";
+        }
 
-<p class="thanbai">Tôi tốt nghiệp Cử nhân chuyên ngành Công nghệ thông tin tại <b>trường ĐH ABC</b>. Sau khi tốt nghiệp tôi làm việc ở vị trí Lập trình viên tại <b>Công ty chuyên sản xuất và gia công phần mềm DEF</b>. Tại vị trí này tôi tham gia phát triển các dự án ứng dụng web Frontend trên nền tảng <b>HTML5, CSS3 và Javascript</b>.</p>
+        function back() {
+            let exp = document.form.textview.value
+            document.form.textview.value = exp.substring(0, exp.length - 1);
+        }
 
-<p class="thanbai">Tôi cũng hiểu rằng vị trí này đòi hỏi ứng viên có khả năng làm việc bằng tiếng Anh khá, khả năng chịu được áp lực công việc cũng như làm việc nhóm tốt. Tôi tin với khả năng của mình có thể hoàn thành tốt nhiệm vụ Quý công ty giao phó.</p>
+        function can() {
+            document.form.textview.value = Math.sqrt(document.form.textview.value)
+        }
 
-<p class="thanbai">Tôi hy vọng có cơ hội được tham gia và đóng góp công sức vào sự phát triển của Quý công ty. Mọi liên hệ về lịch phỏng vấn hay thông tin về hồ sơ ứng tuyển này, xin vui lòng liên lạc số điện thoại: ...</p>
-
-<p id="ketbai">Xin chân thành cảm ơn và trân trọng kính chào!</p>
-
-<p id="ketbai">Hà Nội, ngày 10 tháng 10 năm 2018</p>
-
-<p id="ketbai">Người làm đơn</p>
-<p id="ketbai">.............</p>
+        function binh() {
+            document.form.textview.value = Math.pow(document.form.textview.value, 2);
+        }
+    </script>
 </body>
+
 </html>
