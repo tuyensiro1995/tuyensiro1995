@@ -8,10 +8,13 @@
     padding: 0;
     margin: 0;
 }
+<<<<<<< HEAD
 .img-fluid{
     width: 100%;
     height: auto;
 }
+=======
+>>>>>>> 7bcc28c895d83f831656672b355f990831d270d3
 
 input.search-input {
     width: 200px;
@@ -27,9 +30,13 @@ input.search-input {
 
 .carousel-item {
     width: 100%;
+<<<<<<< HEAD
     background-size: cover;
     background-repeat: no-repeat center fixed;
 
+=======
+    height: 750px;
+>>>>>>> 7bcc28c895d83f831656672b355f990831d270d3
 }
 
 ul.col-md-4 {
@@ -158,13 +165,21 @@ h3.text-colorblue {
 #left-to-right{
     position: relative;
     animation-duration: 2s;
+<<<<<<< HEAD
     animation-name: slidein1;
 }
+=======
+    animation-name: slidein1; 
+  }
+>>>>>>> 7bcc28c895d83f831656672b355f990831d270d3
   #right-to-left{ 
     position: relative;
     animation-duration: 2s;
     animation-name: slidein2; 
+<<<<<<< HEAD
     padding-left: 25px;
+=======
+>>>>>>> 7bcc28c895d83f831656672b355f990831d270d3
   }
   @keyframes slidein1 {
     from {
@@ -190,9 +205,19 @@ h3.text-colorblue {
       opacity: 1;
     }
   }
+<<<<<<< HEAD
   .img-effect{
       overflow: hidden;
       position: relative
+=======
+  .img-effect:hover img{
+    filter: opacity(0.5);
+    transform: scale(1.2);
+    transition: 1s;
+  }
+  .img-effect{
+      overflow: hidden;
+>>>>>>> 7bcc28c895d83f831656672b355f990831d270d3
   }
 .img-effect-item div{
     position: absolute;
@@ -313,6 +338,7 @@ section.container-fluid {/* background-color: #2692ff; */padding-left: 0;padding
     top: 170% !important;
     left: -690%!important;
 }
+<<<<<<< HEAD
 a.nav-link.active {
     background-color: #2694ff;
     border-radius: 7px;
@@ -379,3 +405,5 @@ img.button-nav-right {
     -ms-transform:;
     -o-transform:;
 }
+=======
+>>>>>>> 7bcc28c895d83f831656672b355f990831d270d3
